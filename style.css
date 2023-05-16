@@ -3,6 +3,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.container {
+  font-family: arial;
+  font-size: 24px;
+  width: 350px;
+  height: 200px;
+  /* 中央揃え */
+  margin: 0 auto;
+  outline: dashed 1px black;
+}
+
+.AlphabetButton {
+  width: 60px;
+  height: 40px;
+  font-size: 30px;
+}
+
 #game-container {
   margin-top: 100px;
 }

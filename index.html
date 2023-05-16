@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>タイピングゲーム</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>拼音入力</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="game-container">
-      <h1>タイピングゲーム</h1>
+    <div class="container" id="game-container">
+      <h1>拼音入力テスト</h1>
       <p id="word"></p>
       <input type="text" id="input" autofocus />
       <button id="start-btn">スタート</button>
-      <p id="score">スコア: 0</p>
+      <table style="width: 100%">
+        <tr>
+          <th><button class="AlphabetButton">ā</button></th>
+          <th><button class="AlphabetButton">á</button></th>
+          <th><button class="AlphabetButton">ǎ</button></th>
+          <th><button class="AlphabetButton">à</button></th>
+        </tr>
+        <tr>
+          <th><button class="AlphabetButton">ī</button></th>
+          <th><button class="AlphabetButton">í</button></th>
+          <th><button class="AlphabetButton">ǐ</button></th>
+          <th><button class="AlphabetButton">ì</button></th>
+        </tr>
+        <tr>
+          <th><button class="AlphabetButton">ē</button></th>
+          <th><button class="AlphabetButton">é</button></th>
+          <th><button class="AlphabetButton">ě</button></th>
+          <th><button class="AlphabetButton">è</button></th>
+        </tr>
+        <tr>
+          <th><button class="AlphabetButton">ō</button></th>
+          <th><button class="AlphabetButton">ó</button></th>
+          <th><button class="AlphabetButton">ǒ</button></th>
+          <th><button class="AlphabetButton">ò</button></th>
+        </tr>
+        <tr>
+          <th><button class="AlphabetButton">ū</button></th>
+          <th><button class="AlphabetButton">ú</button></th>
+          <th><button class="AlphabetButton">ǔ</button></th>
+          <th><button class="AlphabetButton">ù</button></th>
+        </tr>
+        <tr>
+          <th><button class="AlphabetButton">ǖ</button></th>
+          <th><button class="AlphabetButton">ǘ</button></th>
+          <th><button class="AlphabetButton">ǚ</button></th>
+          <th><button class="AlphabetButton">ǜ</button></th>
+        </tr>
+      </table>
     </div>
     <script src="script.js"></script>
   </body>
