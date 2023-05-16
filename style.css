@@ -6,8 +6,8 @@ body {
 .container {
   font-family: arial;
   font-size: 24px;
-  width: 350px;
-  height: 200px;
+  /* width: 350px; */
+  /* height: 200px; */
   /* 中央揃え */
   margin: 0 auto;
   outline: dashed 1px black;
@@ -19,9 +19,9 @@ body {
   font-size: 30px;
 }
 
-#game-container {
-  margin-top: 100px;
-}
+/* #game-container {
+  /* margin-top: 100px; 
+} */
 
 h1 {
   font-size: 24px;
