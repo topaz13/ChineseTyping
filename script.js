@@ -46,6 +46,19 @@ function startGame() {
   generateWord();
 }
 
+// key入力
+document.addEventListener("keypress", keypress_ivent);
+function keypress_ivent(e) {
+  //いずれかのキーが押された時の処理
+  console.log(e.textContent);
+  console.log(e.code);
+  console.log(e);
+  if (97 <= e.keyCode && e.keyCode <= 122) {
+    inputElement.value = inputElement.value + e.key;
+  }
+  return false;
+}
+
 function generateWord() {
   if (currentWordIndex >= kanjiData.length) {
     endGame();
