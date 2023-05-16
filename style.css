@@ -6,28 +6,25 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
 }
-
+.KeyRow {
+  /* width: 200px; */
+  margin: auto;
+}
 .container {
   font-family: arial;
   font-size: 24px;
-  /* width: 350px; */
-  /* height: 200px; */
-  /* 中央揃え */
   max-width: 100%;
   margin: 0 auto;
   outline: dashed 1px black;
 }
 
 .AlphabetButton {
-  /* width: 60px; */
-  width: 90%;
-  height: 60px;
+  /* width: 100%; */
+  width: 8vw;
+  height: 6vw;
+  /* height: 60px; */
   font-size: 30px;
 }
-
-/* #game-container {
-  /* margin-top: 100px; 
-} */
 
 h1 {
   font-size: 24px;
@@ -42,4 +39,9 @@ input[type="text"] {
   padding: 10px;
   font-size: 36px;
   width: 90%;
+}
+
+.KeyButton {
+  width: 8vw;
+  height: 6vw;
 }
