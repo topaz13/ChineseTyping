@@ -20,7 +20,7 @@ var state = "READY";
 var currentWordIndex;
 // var score;
 
-startButton.addEventListener("click", startGame);
+// startButton.addEventListener("click", startGame);
 
 function Init() {
   // button
@@ -101,7 +101,7 @@ function AddSisei(siseiValue) {
 function endGame() {
   wordElement.textContent = "ゲーム終了";
   inputElement.disabled = true;
-  startButton.disabled = false;
+  // startButton.disabled = false;
 }
 
 //CSVファイルを読み込む関数getCSV()の定義

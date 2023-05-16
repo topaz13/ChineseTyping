@@ -9,13 +9,15 @@ body {
   /* width: 350px; */
   /* height: 200px; */
   /* 中央揃え */
+  max-width: 100%;
   margin: 0 auto;
   outline: dashed 1px black;
 }
 
 .AlphabetButton {
-  width: 60px;
-  height: 40px;
+  /* width: 60px; */
+  width: 90%;
+  height: 60px;
   font-size: 30px;
 }
 
@@ -34,5 +36,6 @@ h1 {
 input[type="text"] {
   margin-top: 20px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 36px;
+  width: 90%;
 }
