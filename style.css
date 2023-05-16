@@ -7,7 +7,6 @@ body {
   font-family: Arial, sans-serif;
 }
 .KeyRow {
-  /* width: 200px; */
   margin: auto;
 }
 .container {
@@ -19,11 +18,14 @@ body {
 }
 
 .AlphabetButton {
-  /* width: 100%; */
   width: 8vw;
   height: 6vw;
-  /* height: 60px; */
-  font-size: 30px;
+  font-size: 20px;
+}
+.KeyButton {
+  width: 8vw;
+  height: 6vw;
+  font-size: 20px;
 }
 
 h1 {
@@ -39,9 +41,4 @@ input[type="text"] {
   padding: 10px;
   font-size: 36px;
   width: 90%;
-}
-
-.KeyButton {
-  width: 8vw;
-  height: 6vw;
 }

@@ -14,13 +14,10 @@ var sisei = [
 var wordElement = document.getElementById("word");
 var inputElement = document.getElementById("input");
 var startButton = document.getElementById("start-btn");
-// var scoreElement = document.getElementById("score");
+
 var state = "READY";
 
 var currentWordIndex;
-// var score;
-
-// startButton.addEventListener("click", startGame);
 
 function Init() {
   // button
@@ -28,7 +25,16 @@ function Init() {
   console.log(elms.length);
   for (let index = 0; index < elms.length; index++) {
     const element = elms[index];
-    // element.bu
+    element.addEventListener("click", () => {
+      console.log(inputElement.value);
+      inputElement.value = inputElement.value + element.textContent;
+      console.log(element.textContent);
+    });
+  }
+  elms = document.getElementsByClassName("KeyButton");
+  console.log(elms.length);
+  for (let index = 0; index < elms.length; index++) {
+    const element = elms[index];
     element.addEventListener("click", () => {
       console.log(inputElement.value);
       inputElement.value = inputElement.value + element.textContent;
