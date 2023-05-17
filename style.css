@@ -30,8 +30,11 @@ body {
   font-size: 20px;
   text-align: center;
 }
-#EnterButton {
-  width: 60%;
+.CommandButton {
+  width: 20vw;
+  height: 7vw;
+  font-size: 16px;
+  text-align: center;
 }
 
 h1 {
@@ -51,9 +54,19 @@ input[type="text"] {
 
 /* footer 作成
 https://web-camp.io/magazine/archives/27870 */
-* {
+
+/* footer{
+    position:fixed;
+} */
+/* * {
   margin: 0;
   padding: 0;
+} */
+footer {
+  position: absolute; /*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  width: 100%;
+  background-color: #ffffffff;
 }
 header .headline {
   font-size: 32px;
@@ -69,13 +82,45 @@ header .headline {
   margin: 0 20px;
 }
 
-footer {
+/* footer {
   width: 100%;
-  height: 120px;
+  height: 400px;
   text-align: center;
   padding: 50px 0;
-  /* background-color: #cab64a; */
+  background-color: #cab64a;
 }
 .footer-text {
   color: #fff;
+} */
+
+/* https://eclair.blog/examples-of-table/
+いい感じのTable */
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .Table {
+    font-size: 12px;
+  }
+}
+.Table-Head {
+  background: #eee;
+}
+.Table-Head-Row-Cell {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.Table-Body-Row:nth-child(even) {
+  background: #eee;
+}
+.Table-Body-Row-Cell {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }

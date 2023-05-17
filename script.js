@@ -20,14 +20,11 @@ var currentWordIndex;
 function Init() {
   // Button Events
   var elms = document.getElementsByClassName("AlphabetButton");
-  console.log(elms.length);
   for (let index = 0; index < elms.length; index++) {
     const element = elms[index];
     element.addEventListener("click", () => {
-      console.log(inputElement.value);
       inputElement.value = inputElement.value + element.textContent;
-      console.log(element.textContent);
-      inputElement.focus();
+      // inputElement.focus();
     });
   }
   elms = document.getElementsByClassName("KeyButton");
