@@ -14,14 +14,14 @@
     <div class="container" id="game-container">
       <label>
         <!-- <span></span> -->
-        <h1>拼音入力テスト ?</h1>
+        <h1 id="TitleText">拼音入力テスト ?</h1>
+        <button id="help-btn">三</button>
         <input type="checkbox" name="checkbox" />
         <div id="popup">
           iPhoneで勉強するようにtopazが簡単に作りました。
           表示される単語の拼音を入力してEnterしてください。
         </div>
       </label>
-
       <p id="word"></p>
       <input type="text" id="input" autofocus />
     </div>
@@ -29,9 +29,9 @@
     <table class="Table">
       <thead class="Table-Head">
         <tr class="Table-Head-Row">
-          <th class="Table-Head-Row-Cell">名前</th>
-          <th class="Table-Head-Row-Cell">言語</th>
-          <th class="Table-Head-Row-Cell">種類</th>
+          <th class="Table-Head-Row-Cell">汉语</th>
+          <th class="Table-Head-Row-Cell">拼音</th>
+          <th class="Table-Head-Row-Cell">日语</th>
         </tr>
       </thead>
       <tbody class="Table-Body" id="WordTable">
@@ -42,59 +42,6 @@
         </tr>
       </tbody>
     </table>
-
-    <!-- <footer>
-      <table class="KeyRow">
-        <tr>
-          <td><button class="AlphabetButton">一</button></td>
-          <td><button class="AlphabetButton">二</button></td>
-          <td><button class="AlphabetButton">三</button></td>
-          <td><button class="AlphabetButton">四</button></td>
-        </tr>
-      </table>
-      <table class="KeyRow">
-        <tr>
-          <td><button class="KeyButton">q</button></td>
-          <td><button class="KeyButton">w</button></td>
-          <td><button class="KeyButton">e</button></td>
-          <td><button class="KeyButton">r</button></td>
-          <td><button class="KeyButton">t</button></td>
-          <td><button class="KeyButton">y</button></td>
-          <td><button class="KeyButton">u</button></td>
-          <td><button class="KeyButton">i</button></td>
-          <td><button class="KeyButton">o</button></td>
-          <td><button class="KeyButton">p</button></td>
-        </tr>
-      </table>
-      <table class="KeyRow">
-        <tr>
-          <td><button class="KeyButton">a</button></td>
-          <td><button class="KeyButton">s</button></td>
-          <td><button class="KeyButton">d</button></td>
-          <td><button class="KeyButton">f</button></td>
-          <td><button class="KeyButton">g</button></td>
-          <td><button class="KeyButton">h</button></td>
-          <td><button class="KeyButton">j</button></td>
-          <td><button class="KeyButton">k</button></td>
-          <td><button class="KeyButton">l</button></td>
-        </tr>
-      </table>
-      <table class="KeyRow">
-        <td><button class="KeyButton">z</button></td>
-        <td><button class="KeyButton">x</button></td>
-        <td><button class="KeyButton">c</button></td>
-        <td><button class="KeyButton">v</button></td>
-        <td><button class="KeyButton">b</button></td>
-        <td><button class="KeyButton">n</button></td>
-        <td><button class="KeyButton">m</button></td>
-      </table>
-
-      <table class="KeyRow">
-        <td><button class="CommandButton" id="EnterButton">Enter</button></td>
-        <td><button class="CommandButton" id="DeleteButton">Delete</button></td>
-        <td><button class="CommandButton" id="AnswerButton">Answer</button></td>
-      </table>
-    </footer> -->
 
     <script src="script.js"></script>
   </body>
