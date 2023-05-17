@@ -237,6 +237,8 @@ function PressedEnter() {
 
 function checkInput() {
   var lastChara = inputElement.value[inputElement.value.length - 1];
+  if (lastChara == null) return;
+  if (lastChara.length <= 0) return;
   var code = lastChara.codePointAt(0);
 
   console.log(lastChara);
