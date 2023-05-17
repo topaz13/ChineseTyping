@@ -54,19 +54,6 @@ function Init() {
       console.log(element.textContent);
     });
   }
-
-  enterButton.addEventListener("click", () => {
-    checkInput();
-  });
-  deleteButton.addEventListener("click", () => {
-    inputElement.value = inputElement.value.substring(
-      0,
-      inputElement.value.length - 1
-    );
-  });
-  answerButton.addEventListener("click", () => {
-    checkInput();
-  });
   currentWordIndex = 0;
   inputElement.value = "";
 
@@ -112,6 +99,30 @@ document.addEventListener("keypress", keypress_ivent);
 function keypress_ivent(e) {
   console.log(e);
   if (97 <= e.keyCode && e.keyCode <= 122) {
+    if (e.key == "a") {
+      OnClickedBoin(0);
+      return;
+    }
+    if (e.key == "e") {
+      OnClickedBoin(1);
+      return;
+    }
+    if (e.key == "o") {
+      OnClickedBoin(2);
+      return;
+    }
+    if (e.key == "i") {
+      OnClickedBoin(3);
+      return;
+    }
+    if (e.key == "u") {
+      OnClickedBoin(4);
+      return;
+    }
+    if (e.key == "v") {
+      OnClickedBoin(5);
+      return;
+    }
     inputElement.value = inputElement.value + e.key;
   }
   if (e.key == "1") {
@@ -130,6 +141,49 @@ function keypress_ivent(e) {
     AddData();
   }
   return false;
+}
+
+function OnClickedBoin(index) {
+  if (inputElement.value < 1) {
+    if (sisei[index][0] == "v") {
+      inputElement.value = inputElement.value + "ü";
+      return;
+    }
+    inputElement.value = inputElement.value + sisei[index][0];
+    return;
+  }
+  var lastCharacter = inputElement.value[inputElement.value.length - 1];
+  for (let x = 0; x < sisei.length; x++) {
+    const element = sisei[x];
+    for (let y = 0; y < element.length; y++) {
+      var elm = element[y];
+      if (elm == "v") {
+        elm = "ü";
+      }
+      if (elm == lastCharacter) {
+        console.log("Aaaas");
+        // ここで入れ替えの処理を行う
+        if (element[0] == sisei[index][0]) {
+          var nextCharacter = element[(y + 1) % 5];
+          inputElement.value = inputElement.value.substring(
+            0,
+            inputElement.value.length - 1
+          );
+          if (nextCharacter == "v") {
+            inputElement.value = inputElement.value + "ü";
+            return;
+          }
+          inputElement.value = inputElement.value + nextCharacter;
+          return;
+        }
+      }
+    }
+  }
+  if (sisei[index][0] == "v") {
+    inputElement.value = inputElement.value + "ü";
+    return;
+  }
+  inputElement.value = inputElement.value + sisei[index][0];
 }
 
 function generateWord() {
