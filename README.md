@@ -1,6 +1,6 @@
-# [ChineseTyping](https://github.com/topaz13/ChineseTyping)
+# [ChineseTyping](https://topaz13.github.io/ChineseTyping/)
 
-topaz が自身のために作った中国語単語学習サイトです。[こちら](https://github.com/topaz13/ChineseTyping)からプレイすることができます。  
+topaz が自身のために作った中国語単語学習サイトです。[こちら](https://topaz13.github.io/ChineseTyping/)からプレイすることができます。  
 プログラミングは目的ではないので雑に開発しました。  
 スマホで行うことを想定しており、topaz の端末(iPhone12mini)でのみ動作確認をしています。他の環境だとレイアウトがくずれる恐れがあります。  
 ※topaz は中国語初心者なため、間違い等ある恐れがあります。
