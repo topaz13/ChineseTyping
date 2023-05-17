@@ -13,6 +13,7 @@ const sisei = [
 var wordElement = document.getElementById("word");
 var inputElement = document.getElementById("input");
 var startButton = document.getElementById("start-btn");
+var enterButton = document.getElementById("EnterButton");
 
 var currentWordIndex;
 
@@ -26,6 +27,7 @@ function Init() {
       console.log(inputElement.value);
       inputElement.value = inputElement.value + element.textContent;
       console.log(element.textContent);
+      inputElement.focus();
     });
   }
   elms = document.getElementsByClassName("KeyButton");
@@ -38,6 +40,10 @@ function Init() {
       console.log(element.textContent);
     });
   }
+
+  enterButton.addEventListener("click", () => {
+    checkInput();
+  });
   currentWordIndex = 0;
   inputElement.value = "";
 
@@ -76,7 +82,6 @@ function keypress_ivent(e) {
     }
   }
 
-  // TODO: BACKSPACE
   return false;
 }
 
@@ -88,13 +93,13 @@ function generateWord() {
   wordElement.textContent = kanjiData[currentWordIndex][0];
 }
 
-inputElement.addEventListener("input", checkInput);
-
 function checkInput() {
-  if (inputElement.value.trim() === "www") {
+  if (inputElement.value.trim() === kanjiData[currentWordIndex][1]) {
     inputElement.value = "";
     currentWordIndex++;
     generateWord();
+  } else {
+    console.log("failed");
   }
 }
 
