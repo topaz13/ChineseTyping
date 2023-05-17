@@ -84,19 +84,16 @@ function keydown_ivent(e) {
     console.log("WWWWW");
     if (inputElement.value.length > 0) {
       console.log("WWWWW");
-      inputElement.value = inputElement.value.substring(
-        0,
-        inputElement.value.length - 1
-      );
     }
   }
   if (e.code == "Enter") {
-    checkInput();
+    PressedEnter();
   }
 }
 // KEY PRESSED
 document.addEventListener("keypress", keypress_ivent);
 function keypress_ivent(e) {
+  return;
   console.log(e);
   if (97 <= e.keyCode && e.keyCode <= 122) {
     if (e.key == "a") {
@@ -142,6 +139,8 @@ function keypress_ivent(e) {
   }
   return false;
 }
+
+inputElement.addEventListener("input", checkInput);
 
 function OnClickedBoin(index) {
   if (inputElement.value < 1) {
@@ -194,7 +193,35 @@ function generateWord() {
   wordElement.textContent = kanjiData[currentWordIndex][0];
 }
 
-function checkInput() {
+function InputAlphabet(chara) {
+  if (chara == "a") {
+    OnClickedBoin(0);
+    return;
+  }
+  if (chara == "e") {
+    OnClickedBoin(1);
+    return;
+  }
+  if (chara == "o") {
+    OnClickedBoin(2);
+    return;
+  }
+  if (chara == "i") {
+    OnClickedBoin(3);
+    return;
+  }
+  if (chara == "u") {
+    OnClickedBoin(4);
+    return;
+  }
+  if (chara == "v") {
+    OnClickedBoin(5);
+    return;
+  }
+  inputElement.value = inputElement.value + chara;
+}
+
+function PressedEnter() {
   if (inputElement.value.trim() === kanjiData[currentWordIndex][1]) {
     inputElement.value = "";
     var kanji = kanjiData[currentWordIndex][0];
@@ -205,6 +232,29 @@ function checkInput() {
     generateWord();
   } else {
     console.log("failed");
+  }
+}
+
+function checkInput() {
+  var lastChara = inputElement.value[inputElement.value.length - 1];
+  var code = lastChara.codePointAt(0);
+
+  console.log(lastChara);
+
+  if (97 <= code && code <= 122) {
+    inputElement.value = inputElement.value.substring(
+      0,
+      inputElement.value.length - 1
+    );
+    InputAlphabet(lastChara);
+    return;
+  } else {
+    // 他の入力は消す
+    inputElement.value = inputElement.value.substring(
+      0,
+      inputElement.value.length - 1
+    );
+    return;
   }
 }
 
