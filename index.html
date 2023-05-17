@@ -12,10 +12,20 @@
   </head>
   <body>
     <div class="container" id="game-container">
-      <h1>拼音入力テスト</h1>
+      <label>
+        <!-- <span></span> -->
+        <h1>拼音入力テスト ?</h1>
+        <input type="checkbox" name="checkbox" />
+        <div id="popup">
+          iPhoneで勉強するようにtopazが簡単に作りました。
+          表示される単語の拼音を入力してEnterしてください。
+        </div>
+      </label>
+
       <p id="word"></p>
       <input type="text" id="input" autofocus />
     </div>
+
     <table class="Table">
       <thead class="Table-Head">
         <tr class="Table-Head-Row">
@@ -24,247 +34,22 @@
           <th class="Table-Head-Row-Cell">種類</th>
         </tr>
       </thead>
-      <tbody class="Table-Body">
+      <tbody class="Table-Body" id="WordTable">
         <tr class="Table-Body-Row">
           <td class="Table-Body-Row-Cell">jQuery</td>
           <td class="Table-Body-Row-Cell">JavaScript</td>
           <td class="Table-Body-Row-Cell">ライブラリ</td>
         </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Vue.js</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">React</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
-        <tr class="Table-Body-Row">
-          <td class="Table-Body-Row-Cell">Angular</td>
-          <td class="Table-Body-Row-Cell">JavaScript</td>
-          <td class="Table-Body-Row-Cell">フレームワーク</td>
-        </tr>
       </tbody>
     </table>
 
     <footer>
-      <!-- footer -->
       <table class="KeyRow">
         <tr>
-          <td><button class="AlphabetButton">ā</button></td>
-          <td><button class="AlphabetButton">á</button></td>
-          <td><button class="AlphabetButton">ǎ</button></td>
-          <td><button class="AlphabetButton">à</button></td>
-          <td><button class="AlphabetButton">ō</button></td>
-          <td><button class="AlphabetButton">ó</button></td>
-          <td><button class="AlphabetButton">ǒ</button></td>
-          <td><button class="AlphabetButton">ò</button></td>
-        </tr>
-      </table>
-      <table class="KeyRow">
-        <tr>
-          <td><button class="AlphabetButton">ī</button></td>
-          <td><button class="AlphabetButton">í</button></td>
-          <td><button class="AlphabetButton">ǐ</button></td>
-          <td><button class="AlphabetButton">ì</button></td>
-          <td><button class="AlphabetButton">ū</button></td>
-          <td><button class="AlphabetButton">ú</button></td>
-          <td><button class="AlphabetButton">ǔ</button></td>
-          <td><button class="AlphabetButton">ù</button></td>
-        </tr>
-      </table>
-      <table class="KeyRow">
-        <tr>
-          <td><button class="AlphabetButton">ē</button></td>
-          <td><button class="AlphabetButton">é</button></td>
-          <td><button class="AlphabetButton">ě</button></td>
-          <td><button class="AlphabetButton">è</button></td>
-          <td><button class="AlphabetButton">ǖ</button></td>
-          <td><button class="AlphabetButton">ǘ</button></td>
-          <td><button class="AlphabetButton">ǚ</button></td>
-          <td><button class="AlphabetButton">ǜ</button></td>
+          <td><button class="AlphabetButton">一声</button></td>
+          <td><button class="AlphabetButton">二声</button></td>
+          <td><button class="AlphabetButton">三声</button></td>
+          <td><button class="AlphabetButton">四声</button></td>
         </tr>
       </table>
       <table class="KeyRow">
@@ -307,7 +92,7 @@
       <table class="KeyRow">
         <td><button class="CommandButton" id="EnterButton">Enter</button></td>
         <td><button class="CommandButton" id="DeleteButton">Delete</button></td>
-        <td><button class="CommandButton" id="AnsweButton">Answer</button></td>
+        <td><button class="CommandButton" id="AnswerButton">Answer</button></td>
       </table>
     </footer>
 

@@ -1,4 +1,3 @@
-// ["漢字","拼音","意味"]
 var kanjiData;
 
 const sisei = [
@@ -14,6 +13,9 @@ var wordElement = document.getElementById("word");
 var inputElement = document.getElementById("input");
 var startButton = document.getElementById("start-btn");
 var enterButton = document.getElementById("EnterButton");
+var deleteButton = document.getElementById("DeleteButton");
+var answerButton = document.getElementById("AnswerButton");
+var wordTable = document.getElementById("WordTable");
 
 var currentWordIndex;
 
@@ -23,8 +25,23 @@ function Init() {
   for (let index = 0; index < elms.length; index++) {
     const element = elms[index];
     element.addEventListener("click", () => {
+      if (element.textContent == "一声") {
+        AddSisei(1);
+        return;
+      }
+      if (element.textContent == "二声") {
+        AddSisei(2);
+        return;
+      }
+      if (element.textContent == "三声") {
+        AddSisei(3);
+        return;
+      }
+      if (element.textContent == "四声") {
+        AddSisei(4);
+        return;
+      }
       inputElement.value = inputElement.value + element.textContent;
-      // inputElement.focus();
     });
   }
   elms = document.getElementsByClassName("KeyButton");
@@ -41,15 +58,57 @@ function Init() {
   enterButton.addEventListener("click", () => {
     checkInput();
   });
+  deleteButton.addEventListener("click", () => {
+    inputElement.value = inputElement.value.substring(
+      0,
+      inputElement.value.length - 1
+    );
+  });
+  answerButton.addEventListener("click", () => {
+    checkInput();
+  });
   currentWordIndex = 0;
   inputElement.value = "";
 
   generateWord();
 }
 
+function AddData(kanji, pinyin, wayaku) {
+  var tr = document.createElement("tr");
+  tr.className = "Table-Body-Row";
+  var td1 = document.createElement("td");
+  var td2 = document.createElement("td");
+  var td3 = document.createElement("td");
+  td1.innerText = kanji;
+  td1.className = "Table-Body-Row-Cell";
+  td2.innerText = pinyin;
+  td2.className = "Table-Body-Row-Cell";
+  td3.innerText = wayaku;
+  td3.className = "Table-Body-Row-Cell";
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  wordTable.insertBefore(tr, wordTable.firstChild);
+}
+
+document.addEventListener("keydown", keydown_ivent);
+function keydown_ivent(e) {
+  if (e.code == "Backspace") {
+    console.log("WWWWW");
+    if (inputElement.value.length > 0) {
+      console.log("WWWWW");
+      inputElement.value = inputElement.value.substring(
+        0,
+        inputElement.value.length - 1
+      );
+    }
+  }
+  if (e.code == "Enter") {
+    checkInput();
+  }
+}
 // KEY PRESSED
 document.addEventListener("keypress", keypress_ivent);
-document.addEventListener("keydown", keypress_ivent);
 function keypress_ivent(e) {
   console.log(e);
   if (97 <= e.keyCode && e.keyCode <= 122) {
@@ -67,18 +126,9 @@ function keypress_ivent(e) {
   if (e.key == "4") {
     AddSisei(4);
   }
-
-  if (e.code == "Backspace") {
-    console.log("WWWWW");
-    if (inputElement.value.length > 0) {
-      console.log("WWWWW");
-      inputElement.value = inputElement.value.substring(
-        0,
-        inputElement.value.length - 1
-      );
-    }
+  if (e.key == "7") {
+    AddData();
   }
-
   return false;
 }
 
@@ -93,6 +143,10 @@ function generateWord() {
 function checkInput() {
   if (inputElement.value.trim() === kanjiData[currentWordIndex][1]) {
     inputElement.value = "";
+    var kanji = kanjiData[currentWordIndex][0];
+    var pinyin = kanjiData[currentWordIndex][1];
+    var wayaku = kanjiData[currentWordIndex][2];
+    AddData(kanji, pinyin, wayaku);
     currentWordIndex++;
     generateWord();
   } else {
