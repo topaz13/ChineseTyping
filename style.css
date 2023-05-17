@@ -8,6 +8,7 @@ body {
 }
 .KeyRow {
   margin: auto;
+  border-spacing: 0px;
 }
 .container {
   font-family: arial;
