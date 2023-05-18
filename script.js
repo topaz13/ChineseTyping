@@ -191,7 +191,6 @@ function keypress_ivent(e) {
 }
 
 inputElement.addEventListener("input", checkInput);
-
 function OnClickedBoin(index) {
   if (inputElement.value < 1) {
     if (sisei[index][0] == "v") {
@@ -210,7 +209,6 @@ function OnClickedBoin(index) {
         elm = "ü";
       }
       if (elm == lastCharacter) {
-        console.log("Aaaas");
         // ここで入れ替えの処理を行う
         if (element[0] == sisei[index][0]) {
           var nextCharacter = element[(y + 1) % 5];
@@ -272,7 +270,10 @@ function InputAlphabet(chara) {
 }
 
 function PressedEnter() {
-  if (inputElement.value.trim() === kanjiData[currentWordIndex][1]) {
+  if (
+    inputElement.value.trim() ===
+    kanjiData[currentWordIndex][1].replace(/\s+/g, "")
+  ) {
     inputElement.value = "";
     var kanji = kanjiData[currentWordIndex][0];
     var pinyin = kanjiData[currentWordIndex][1];
@@ -285,14 +286,14 @@ function PressedEnter() {
   }
 }
 
+// 入力があるたびに』処理を行う。
 function checkInput() {
   var lastChara = inputElement.value[inputElement.value.length - 1];
   if (lastChara == null) return;
   if (lastChara.length <= 0) return;
   var code = lastChara.codePointAt(0);
 
-  console.log(lastChara);
-
+  // アルファベットの入力
   if (97 <= code && code <= 122) {
     inputElement.value = inputElement.value.substring(
       0,
