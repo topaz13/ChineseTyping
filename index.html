@@ -24,6 +24,15 @@
       </label>
       <p id="word"></p>
       <input type="text" id="input" autofocus />
+      <!-- タブバー -->
+      <table class="tab-table">
+        <tbody>
+          <td class="tab-td">
+            <img src="./img/12.png" id="serch-img" />
+          </td>
+          <td class="tab-td"><button id="anser-btn">A</button></td>
+        </tbody>
+      </table>
     </div>
 
     <table class="Table">
@@ -34,7 +43,18 @@
           <th class="Table-Head-Row-Cell">日语</th>
         </tr>
       </thead>
-      <tbody class="Table-Body" id="WordTable"></tbody>
+      <tbody class="Table-Body" id="WordTable">
+        <tr class="Table-Body-Row WrongAnswer">
+          <td class="Table-Body-Row-Cell">爱</td>
+          <td class="Table-Body-Row-Cell">ài</td>
+          <td class="Table-Body-Row-Cell">愛する</td>
+        </tr>
+        <tr class="Table-Body-Row">
+          <td class="Table-Body-Row-Cell">爱</td>
+          <td class="Table-Body-Row-Cell">ài</td>
+          <td class="Table-Body-Row-Cell">愛する</td>
+        </tr>
+      </tbody>
     </table>
 
     <script src="script.js"></script>

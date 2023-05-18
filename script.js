@@ -16,6 +16,11 @@ var enterButton = document.getElementById("EnterButton");
 var deleteButton = document.getElementById("DeleteButton");
 var answerButton = document.getElementById("AnswerButton");
 var wordTable = document.getElementById("WordTable");
+var helpButton = document.getElementById("help-btn");
+var answerButton = document.getElementById("anser-btn");
+var serachButton = document.getElementById("serch-img");
+
+const BASE_SERCH_URL = "https://cjjc.weblio.jp/content/";
 
 var currentWordIndex;
 
@@ -54,15 +59,49 @@ function Init() {
       console.log(element.textContent);
     });
   }
+
+  helpButton.addEventListener("click", () => {
+    console.log("Help is clicked");
+    var popup = document.getElementById("popup");
+    console.log(popup);
+    popup.style.display = "block";
+    console.log("Help is clicked");
+  });
+
+  answerButton.addEventListener("click", () => {
+    console.log("answer is clicked");
+    ShowAnswer();
+  });
+
+  serachButton.addEventListener("click", () => {
+    console.log(" imaga is clicked");
+    var url = BASE_SERCH_URL + kanjiData[currentWordIndex][0];
+    url = encodeURI(url);
+    window.open(url, "_blank");
+  });
+
   currentWordIndex = 0;
   inputElement.value = "";
 
   generateWord();
 }
 
-function AddData(kanji, pinyin, wayaku) {
+function ShowAnswer() {
+  inputElement.value = "";
+  var kanji = kanjiData[currentWordIndex][0];
+  var pinyin = kanjiData[currentWordIndex][1];
+  var wayaku = kanjiData[currentWordIndex][2];
+  AddData(kanji, pinyin, wayaku, true);
+  currentWordIndex++;
+  generateWord();
+}
+
+function AddData(kanji, pinyin, wayaku, isWrongAnswer) {
   var tr = document.createElement("tr");
   tr.className = "Table-Body-Row";
+  if (isWrongAnswer) {
+    tr.className = "Table-Body-Row WrongAnswer";
+  }
   var td1 = document.createElement("td");
   var td2 = document.createElement("td");
   var td3 = document.createElement("td");
@@ -227,7 +266,7 @@ function PressedEnter() {
     var kanji = kanjiData[currentWordIndex][0];
     var pinyin = kanjiData[currentWordIndex][1];
     var wayaku = kanjiData[currentWordIndex][2];
-    AddData(kanji, pinyin, wayaku);
+    AddData(kanji, pinyin, wayaku, false);
     currentWordIndex++;
     generateWord();
   } else {
