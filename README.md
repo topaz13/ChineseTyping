@@ -38,6 +38,8 @@ aの後に数字(1,2,3,4)を入力することで、声調変化させること�
   - [単語リストダウンロード元](https://12daimedaimonya-chinese.com/hsk-word-download/)
 - To be continue. . .
 
+---
+
 ## さいごに
 
 中国語の勉強頑張りましょう!!
