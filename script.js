@@ -120,7 +120,12 @@ function AddData(kanji, pinyin, wayaku, isWrongAnswer) {
   tr.appendChild(td1);
   tr.appendChild(td2);
   tr.appendChild(td3);
-  wordTable.insertBefore(tr, wordTable.firstChild);
+  console.log(wordTable);
+  if (wordTable.children.length > 0) {
+    wordTable.insertBefore(tr, wordTable.firstChild);
+  } else {
+    wordTable.append(tr);
+  }
 }
 
 document.addEventListener("keydown", keydown_ivent);
