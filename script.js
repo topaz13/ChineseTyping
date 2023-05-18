@@ -18,7 +18,7 @@ var answerButton = document.getElementById("AnswerButton");
 var wordTable = document.getElementById("WordTable");
 var helpButton = document.getElementById("help-btn");
 var answerButton = document.getElementById("anser-btn");
-var serachButton = document.getElementById("serch-img");
+var serachButton = document.getElementById("search-btn");
 var popup = document.getElementById("popup");
 
 const BASE_SERCH_URL = "https://cjjc.weblio.jp/content/";
