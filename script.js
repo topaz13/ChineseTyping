@@ -19,6 +19,7 @@ var wordTable = document.getElementById("WordTable");
 var helpButton = document.getElementById("help-btn");
 var answerButton = document.getElementById("anser-btn");
 var serachButton = document.getElementById("serch-img");
+var popup = document.getElementById("popup");
 
 const BASE_SERCH_URL = "https://cjjc.weblio.jp/content/";
 
@@ -65,7 +66,7 @@ function Init() {
     var popup = document.getElementById("popup");
     console.log(popup);
     popup.style.display = "block";
-    console.log("Help is clicked");
+    // console.log("Help is clicked");
   });
 
   answerButton.addEventListener("click", () => {
@@ -78,6 +79,11 @@ function Init() {
     var url = BASE_SERCH_URL + kanjiData[currentWordIndex][0];
     url = encodeURI(url);
     window.open(url, "_blank");
+  });
+
+  popup.addEventListener("click", () => {
+    console.log("pop up is clicked");
+    popup.style.display = "none";
   });
 
   currentWordIndex = 0;
